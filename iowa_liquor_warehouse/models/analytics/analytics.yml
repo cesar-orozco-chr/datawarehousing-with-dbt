@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_sales
+    database: bigquery-public-data
+    schema: iowa_liquor_sales
+    tables:
+      - name: sales
+
+models:
+  - name: monthly_sales
+    description: Table example with analytics functions
+    columns:
+      - name: quarter
+        tests:
+          - not_null
+      - name: month
+      - name: monthly_sales
+  - name: top_quarter_sales
+    description: Table for quarter sales
+    columns:
+      - name: quarter
+      - name: month
+      - name: monthly_sales
+      - name: sales_rank
+  - name: dim_store
+    description: Stores dimension
+  - name: sales_evolution
+    description: Sales evolution by year, quarter and month
+  - name: top_sellers_month
+    description: Sellers performance by month
+  - name: top_sellers
+    description: Best sellers

@@ -1,0 +1,27 @@
+iowa_liquor_warehouse:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /home/czarorozco/.dbt/dbt-user-creds.json
+      project: orozco-cesar-dbt-warehouse
+      dataset: iowa_liquor_warehouse
+      threads: 1
+      location: US
+      priority: interactive
+  target: dev
+
+iowa_liquor_warehouse_pg:
+  outputs:
+    dev:
+      type: postgress
+      host: 
+      user:
+      password:
+      port:
+      dbname:
+      schema:
+      threads: 1
+      keepalives_idle: 0
+      connect_timeout: 10
+  target: dev
