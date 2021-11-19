@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: covid19_seeds
+    database: covid19
+    schema: public
+    tables:
+      - name: covid_19_source
+      - name: deptos_mun_col
+models:
+  - name: covid_19_source_view
+    description: "A starter dbt model"
+    columns:
+      - name: report_date 
+      - name: event_id
+      - name: ack_date
+      - name: state_id 
+      - name: state_name 
+      - name: city_id
+      - name: city_name
+      - name: age 
+      - name: age_measure 
+      - name: genre
+      - name: contagious_type 
+      - name: event_location 
+      - name: status_name 
+      - name: origin_country_id 
+      - name: origin_country_name 
+      - name: recovered 
+      - name: symptons_date 
+      - name: death_date 
+      - name: diagnostic_date 
+      - name: recovered_date 
+      - name: recovered_type 
+      - name: etnic
+      - name: etnic_name

@@ -11,16 +11,16 @@ iowa_liquor_warehouse:
       priority: interactive
   target: dev
 
-iowa_liquor_warehouse_pg:
+covid_19_warehouse:
   outputs:
     dev:
-      type: postgress
-      host: 
-      user:
-      password:
-      port:
-      dbname:
-      schema:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgres
+      port: 5433
+      dbname: covid19
+      schema: public
       threads: 1
       keepalives_idle: 0
       connect_timeout: 10

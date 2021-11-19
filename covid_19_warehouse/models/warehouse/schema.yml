@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_location
+    description: "Origin and destination for each case"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: destination_state_id
+      - name: destination_location_id
+      - name: origin_country_id
+      - name: origin_country_name
+      - name: destination_location_name
+      - name: destination_state_name
+
+  - name: fact_covid_event
+    description: "A starter dbt model"
+    columns:
+      - name: event_id
+      - name: report_date
+      - name: age
+      - name: genre
+      - name: contagious_type
+      - name: event_location
+      - name: status_name
+      - name: recovered
+      - name: recovered_type
+      - name: diagnostic_date
+      - name: symptons_date
+      - name: recovered_date
+      - name: state_id
+      - name: city_id
+      - name: evolution_interval
+      - name: recovered_interval
