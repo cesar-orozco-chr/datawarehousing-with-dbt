@@ -25,3 +25,18 @@ covid_19_warehouse:
       keepalives_idle: 0
       connect_timeout: 10
   target: dev
+
+jaffle_shop:
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgres
+      port: 5433
+      dbname: jaffle_shop
+      schema: dev
+      threads: 1
+      keepalives_idle: 0
+      connect_timeout: 10
+  target: dev

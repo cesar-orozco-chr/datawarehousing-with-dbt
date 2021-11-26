@@ -12,8 +12,9 @@ with covid_events as (
 
 SELECT l.state_name, 
        l.city_name,
-       {% for field_to_avg in fields_to_avg%}
-        avg({{ field_to_avg}}),
+       {% for field_to_avg in fields_to_avg %}
+        avg({{ field_to_avg}})
+        {% if not loop.last %},{% endif %}
        {% endfor %}
 FROM covid_events as ce
 INNER JOIN locations as l ON ce.state_id = l.state_id and cd.city_id = l.city_id
